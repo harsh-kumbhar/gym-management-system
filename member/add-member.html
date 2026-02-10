@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add New Member</title>
+    <style>
+        body {
+            background-color: #1f1f1f;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        .form-container {
+            background-color: #2c2c2c;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.7);
+            width: 400px;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        input[type="text"], input[type="email"], input[type="date"], input[type="number"], textarea {
+            padding: 10px;
+            border-radius: 10px;
+            border: none;
+            margin-bottom: 15px;
+            background-color: #444;
+            color: #fff;
+            font-size: 1rem;
+        }
+
+        textarea {
+            resize: vertical;
+        }
+
+        input[type="submit"] {
+            padding: 12px;
+            background-color: #4caf50;
+            border: none;
+            color: white;
+            font-size: 1rem;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        .back-link {
+            display: block;
+            text-align: center;
+            margin-top: 15px;
+            text-decoration: none;
+            color: #ffcc00;
+            font-weight: bold;
+        }
+
+        .back-link:hover {
+            color: #ffdb4d;
+        }
+    </style>
+</head>
+<body>
+
+<div class="form-container">
+    <h2>Add New Member</h2>
+
+    <form action="add-member.php" method="POST">
+        <label>First Name:</label>
+        <input type="text" name="fname" required>
+
+        <label>Middle Name:</label>
+        <input type="text" name="mname">
+
+        <label>Last Name:</label>
+        <input type="text" name="lname" required>
+
+        <label>DOB:</label>
+        <input type="date" name="dob" required>
+
+        <label>Email:</label>
+        <input type="email" name="email" required>
+
+        <label>Phone:</label>
+        <input type="text" name="phone" required>
+
+        <label>Address:</label>
+        <textarea name="address" required></textarea>
+
+        <label>Gym ID:</label>
+        <input type="number" name="gym_id" required>
+
+        <input type="submit" value="Add Member">
+    </form>
+
+    <a href="member-list.php" class="back-link">⬅️ Back to Member List</a>
+</div>
+
+</body>
+</html>

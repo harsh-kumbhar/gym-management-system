@@ -1,0 +1,60 @@
+INSERT INTO Admin (Username, Password) VALUES 
+('admin1', 'admin@123'),
+('admin2', 'securePass@2024');
+
+INSERT INTO Gym (GymName, Location, ContactInfo, AdminID) VALUES 
+('PowerHouse Gym', 'Mumbai, Maharashtra', '022-12345678', 1),
+('Gold’s Fitness Hub', 'Pune, Maharashtra', '020-98765432', 2);
+
+INSERT INTO Member (FName, MName, LName, DOB, Age, EmailID, PhoneNumber, Address, GymID)
+VALUES 
+('Ravi', 'Kumar', 'Singh', '1995-03-10', TIMESTAMPDIFF(YEAR, '1995-03-10', CURDATE()), 'ravi.singh@example.com', '9876543210', 'Delhi', 1),
+('Anjali', 'R.', 'Mehta', '1998-07-22', TIMESTAMPDIFF(YEAR, '1998-07-22', CURDATE()), 'anjali.mehta@example.com', '7894561230', 'Mumbai', 2),
+('Arjun', 'S.', 'Rao', '1990-12-05', TIMESTAMPDIFF(YEAR, '1990-12-05', CURDATE()), 'arjun.rao@example.com', '8765432109', 'Bangalore', 1),
+('Priya', 'M.', 'Verma', '2000-04-15', TIMESTAMPDIFF(YEAR, '2000-04-15', CURDATE()), 'priya.verma@example.com', '9123456780', 'Hyderabad', 3),
+('Rahul', 'T.', 'Sharma', '1992-11-30', TIMESTAMPDIFF(YEAR, '1992-11-30', CURDATE()), 'rahul.sharma@example.com', '9988776655', 'Chennai', 2),
+('Sneha', 'A.', 'Patel', '1997-09-19', TIMESTAMPDIFF(YEAR, '1997-09-19', CURDATE()), 'sneha.patel@example.com', '9988123456', 'Pune', 1),
+('Vikram', 'P.', 'Yadav', '1993-01-08', TIMESTAMPDIFF(YEAR, '1993-01-08', CURDATE()), 'vikram.yadav@example.com', '9001122334', 'Jaipur', 2),
+('Meena', 'D.', 'Reddy', '1996-06-28', TIMESTAMPDIFF(YEAR, '1996-06-28', CURDATE()), 'meena.reddy@example.com', '9090909090', 'Lucknow', 3),
+('Karan', 'L.', 'Nair', '1988-02-14', TIMESTAMPDIFF(YEAR, '1988-02-14', CURDATE()), 'karan.nair@example.com', '8888999900', 'Kochi', 1),
+('Divya', 'H.', 'Kapoor', '1994-08-05', TIMESTAMPDIFF(YEAR, '1994-08-05', CURDATE()), 'divya.kapoor@example.com', '7878787878', 'Ahmedabad', 2);
+
+
+INSERT INTO FeesPaid (MemberID, PlanDuration, Amount, PaymentReceipt) VALUES
+(28, '3 Months', 2500, 'RCPT001'),
+(29, '6 Months', 5000, 'RCPT002'),
+(30, '12 Months', 9000, 'RCPT003'),
+(31, '3 Months', 2500, 'RCPT004'),
+(32, '6 Months', 5000, 'RCPT005'),
+(33, '12 Months', 9000, 'RCPT006'),
+(34, '3 Months', 2500, 'RCPT007'),
+(35, '6 Months', 5000, 'RCPT008'),
+(36, '12 Months', 9000, 'RCPT009'),
+(37, '3 Months', 2500, 'RCPT010');
+
+
+INSERT INTO Equipment (Name, Type, Status, GymID) VALUES 
+('Treadmill', 'Cardio', 'Available', 1),
+('Dumbbells Set', 'Weight Training', 'In Use', 1),
+('Leg Press Machine', 'Strength', 'Under Maintenance', 2);
+
+INSERT INTO Staff (Name, Salary, PhoneNumber, GymID) VALUES 
+('Vikram Choudhary', 35000.00, '9988776655', 1),
+('Meera Joshi', 28000.00, '8877665544', 2),
+('Rohan Iyer', 40000.00, '7766554433', 1);
+
+INSERT INTO MembershipPlan (PlanType, Duration, Fees) VALUES 
+('Basic Plan', 3, 2500.00),
+('Gold Plan', 6, 5000.00),
+('Diamond Plan', 12, 9000.00);
+
+INSERT INTO `subscription` (`SubscriptionID`, `MemberID`, `PlanID`) VALUES ('1', '28', '4');
+INSERT INTO `subscription` (`SubscriptionID`, `MemberID`, `PlanID`) VALUES ('2', '29', '5');
+INSERT INTO `subscription` (`SubscriptionID`, `MemberID`, `PlanID`) VALUES ('3', '30', '6');
+INSERT INTO `subscription` (`SubscriptionID`, `MemberID`, `PlanID`) VALUES ('4', '31', '4');
+INSERT INTO `subscription` (`SubscriptionID`, `MemberID`, `PlanID`) VALUES ('5', '32', '5');
+INSERT INTO `subscription` (`SubscriptionID`, `MemberID`, `PlanID`) VALUES ('6', '33', '6');
+INSERT INTO `subscription` (`SubscriptionID`, `MemberID`, `PlanID`) VALUES ('7', '34', '4');
+INSERT INTO `subscription` (`SubscriptionID`, `MemberID`, `PlanID`) VALUES ('8', '35', '5');
+INSERT INTO `subscription` (`SubscriptionID`, `MemberID`, `PlanID`) VALUES ('9', '36', '6');
+INSERT INTO `subscription` (`SubscriptionID`, `MemberID`, `PlanID`) VALUES ('10', '37', '4');
