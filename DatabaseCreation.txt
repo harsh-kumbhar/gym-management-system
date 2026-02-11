@@ -78,3 +78,6 @@ CREATE TABLE Subscription (
     FOREIGN KEY (MemberID) REFERENCES Member(MemberID) ON DELETE CASCADE,
     FOREIGN KEY (PlanID) REFERENCES MembershipPlan(PlanID) ON DELETE CASCADE
 );
+
+
+Sample File Do Not Use Complete Copy Paste Content Accordingly
